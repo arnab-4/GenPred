@@ -13,90 +13,88 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="content">
-      <div class="logo"><a href="#">GenPred</a></div>
-      <ul class="menu-list">
-        <div class="icon cancel-btn">
-          <i class="fas fa-times"></i>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo"><a href="#">GenPred</a></div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="icon menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
+    </nav>
+
+    <div class="banner">
+        <h2 class="title">
+        <span class="title-word title-word-1">Gender</span> <br>
+        <span class="title-word title-word-2">Predictor</span>
+        <span class="title-word title-word-3">Application</span>
+        </h2>
+
+        <button id="shareBtn">SHARE</button> 
     </div>
-  </nav>
-
-  <div class="banner">
-    <h2 class="title">
-      <span class="title-word title-word-1">Gender</span> <br>
-      <span class="title-word title-word-2">Predictor</span>
-      <span class="title-word title-word-3">Application</span>
-    </h2>
-
-    <button id="shareBtn">SHARE</button> 
-  </div>
-  <div class="about" id="about">
- <div class="content">
-      <div class="title">Gender Predictor Application </div>
-      <p>Gender prediction using name involves using the characteristics of a person's name to determine their gender. While it can be accurate in many cases, it is not always reliable due to the increasing popularity of gender-neutral names and the complexity of gender identity.
-        Names are often associated with gender, and many cultures have naming conventions that reflect this association. For example, names ending in "a" are often associated with females in some cultures, while names ending in "o" are often associated with males in others.
-      </p>
+    <div class="about" id="about">
+        <div class="content">
+            <div class="title">Gender Predictor Application </div>
+                <p>Gender prediction using name involves using the characteristics of a person's name to determine their gender. While it can be accurate in many cases, it is not always reliable due to the increasing popularity of gender-neutral names and the complexity of gender identity.
+                    Names are often associated with gender, and many cultures have naming conventions that reflect this association. For example, names ending in "a" are often associated with females in some cultures, while names ending in "o" are often associated with males in others.
+            </p>
       
+        </div>
     </div>
-  </div>
 
-  <section class="pred">
+    <section class="pred">
+        <div class="container">
+            <h1 class="app-title">Predict Gender By Name</h1>
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        value="arnab"
+                        id="name"
+                        placeholder="Enter a name.."
+                    /> <br>
+                <button id="submit">Predict</button>
+                </div>
+                    <div id="result">
+                    <div id="wrapper"></div>
+                    <div id="error"></div>
+                </div>
+        </div>
+    </section>
 
-  <div class="container">
-    <h1 class="app-title">Predict Gender By Name</h1>
-    <div class="input-wrapper">
-      <input
-        type="text"
-        value="arnab"
-        id="name"
-        placeholder="Enter a name.."
-      /> <br>
-      <button id="submit">Predict</button>
-    </div>
-    <div id="result">
-      <div id="wrapper"></div>
-      <div id="error"></div>
-    </div>
-  </div>
+    <script src="script.js"></script>
 
-  </section>
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menu = document.querySelector(".menu-list");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+            menu.classList.add("active");
+            menuBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+            body.classList.add("disabledScroll");
+        }
+        cancelBtn.onclick = ()=>{
+            menu.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            body.classList.remove("disabledScroll");
+        }
 
-  <script src="script.js"></script>
-
-  <script>
-    const body = document.querySelector("body");
-    const navbar = document.querySelector(".navbar");
-    const menu = document.querySelector(".menu-list");
-    const menuBtn = document.querySelector(".menu-btn");
-    const cancelBtn = document.querySelector(".cancel-btn");
-    menuBtn.onclick = ()=>{
-      menu.classList.add("active");
-      menuBtn.classList.add("hide");
-      cancelBtn.classList.add("show");
-      body.classList.add("disabledScroll");
-    }
-    cancelBtn.onclick = ()=>{
-      menu.classList.remove("active");
-      menuBtn.classList.remove("hide");
-      cancelBtn.classList.remove("show");
-      body.classList.remove("disabledScroll");
-    }
-
-    window.onscroll = ()=>{
-      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-    }
-  </script>
+        window.onscroll = ()=>{
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
 
 </body>
 </html>
