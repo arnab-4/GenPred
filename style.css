@@ -164,6 +164,7 @@ font-family: 'Poppins', sans-serif;
     background-color: #e9a718;
     width: 90%;
     max-width: 31.25em;
+    height: 30%;
     transform: translate(-50%, -50%);
     top: 200%;
     left: 50%;
@@ -206,6 +207,9 @@ font-family: 'Poppins', sans-serif;
 }
 .male {
     background-color: #5a72e9;
+}
+.null{
+  background-color: #da123a;
 }
 #info {
     padding: 2em 1em;
