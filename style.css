@@ -82,15 +82,15 @@ font-family: 'Poppins', sans-serif;
     box-shadow: 0 0 10px 0 rgb(0, 204, 255) inset, 0 0 10px 4px rgb(0, 204, 255);
 }
 .about{
-    padding: 80vh 0;
+  padding: 40px 0;
+  background-color: #3D8DAE;
+}
+.pred{
+  padding: 80vh 0;
   /*background-color: #ACCFCB;*/
   background-image: url(BACKGROUND.jpeg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-}
-.pred{
-    padding: 100vh 0;
-    background-color: #ACCFCB;
 }
 .about .title{
     font-size: 35px;
